@@ -39,7 +39,6 @@ class _SignupScreenState extends State<SignupScreen> {
             SizedBox(
               height: 40,
             ),
-            // Scrollable form section
             Expanded(
               child: SingleChildScrollView(
                 child: Column(
