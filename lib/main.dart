@@ -1,5 +1,6 @@
 import 'package:cs3midlogin/src/screens/home.dart';
 import 'package:cs3midlogin/src/screens/login.dart';
+import 'package:cs3midlogin/src/screens/profile.dart';
 import 'package:cs3midlogin/src/screens/signup.dart';
 import 'package:flutter/material.dart';
 
@@ -20,6 +21,7 @@ class MyApp extends StatelessWidget {
         '/': (context) => LoginScreen(),
         '/signup': (context) => SignupScreen(),
         '/home': (context) => HomeScreen(),
+        '/profile': (context) => ProfileScreen(),
       },
     );
   }

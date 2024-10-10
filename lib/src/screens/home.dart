@@ -33,7 +33,7 @@ class HomeScreen extends StatelessWidget {
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
                             Text(
-                              "Hi, Ethan!",
+                              "Good Day!",
                               style: TextStyle(
                                 fontSize: 28,
                                 fontWeight: FontWeight.w600,
@@ -50,18 +50,23 @@ class HomeScreen extends StatelessWidget {
                             ),
                           ],
                         ),
-                        Container(
-                          width: 65,
-                          height: 65,
-                          decoration: BoxDecoration(
-                            color: Colors.white.withOpacity(0.1),
-                            borderRadius: BorderRadius.circular(15),
-                          ),
-                          child: Center(
-                            child: Icon(
-                              Icons.notifications,
-                              size: 40,
-                              color: const Color.fromARGB(255, 255, 255, 255),
+                        InkWell(
+                          onTap: () {
+                            Navigator.pushNamed(context, '/profile');
+                          },
+                          child: Container(
+                            width: 65,
+                            height: 65,
+                            decoration: BoxDecoration(
+                              color: Colors.white.withOpacity(0.1),
+                              borderRadius: BorderRadius.circular(15),
+                            ),
+                            child: Center(
+                              child: Icon(
+                                Icons.account_circle,
+                                size: 50,
+                                color: const Color.fromARGB(255, 255, 255, 255),
+                              ),
                             ),
                           ),
                         ),
@@ -117,30 +122,6 @@ class HomeScreen extends StatelessWidget {
                     ),
                     // WeatherWidget(),
                     // WeatherWidget(),
-                    Spacer(),
-                    Row(
-                      children: [
-                        Expanded(
-                          child: ElevatedButton(
-                            onPressed: () {
-                              Navigator.pushNamed(context, '/');
-                            },
-                            style: ElevatedButton.styleFrom(
-                              backgroundColor: Color.fromARGB(255, 223, 12, 57),
-                              elevation: 0,
-                            ),
-                            child: Text(
-                              "Log Out",
-                              style: TextStyle(
-                                fontSize: 14,
-                                fontWeight: FontWeight.w500,
-                                color: Color(0xFFf8f6fb),
-                              ),
-                            ),
-                          ),
-                        ),
-                      ],
-                    ),
                   ],
                 ),
               )
